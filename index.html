@@ -5,8 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap_4_6.css">
+    <link rel="stylesheet" href="plugin/swiper/swiper-bundle_8.min.css">
+    <link rel="stylesheet" href="css/basic.css">
+   
+    <script src="plugin/swiper/swiper-bundle_8.min.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/basic.js"></script>
 </head>
 <body>
+    <!-- 광고웹앱 특성상  
+        메인슬라이드 제이쿼리 지양한 플러그인 사용함 -->
+<div class="swiper">
+   
+        <div class="swiper-wrapper" id="mainBanner">
+            <!-- Slides -->
+            <div class="swiper-slide">아이템1</div>
+            <div class="swiper-slide">아이템2</div>
+            <div class="swiper-slide">아이템3</div>
+
+        </div>
+      
+        <div class="swiper-pagination"></div>
     
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+    
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            });
+    </script>
 </body>
 </html>
